@@ -42,19 +42,15 @@ We ask:
 
 #  Dashboard Preview
 
-## 🔹 Main Dashboard
+##  Main Dashboard
 
-<p align="center">
-  <img src="assets/dashboard.png" width="85%">
-</p>
+![Main Dashboard](assets/dashboard.jpeg)
 
 ---
 
 ##  Security Events Table
 
-<p align="center">
-  <img src="assets/events.png" width="85%">
-</p>
+![Security Events](assets/events.jpeg)
 
 ---
 
