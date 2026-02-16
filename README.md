@@ -1,9 +1,9 @@
 <p align="center">
-  <h1 align="center">🛡️ Context-Aware Security Monitoring Dashboard</h1>
+  <h1 align="center"> Context-Aware Security Monitoring Dashboard</h1>
   <h3 align="center">Team ByteShield</h3>
   <p align="center">
-    🚀 Built for CF4VIT Hackathon <br>
-    🏛️ Sponsored by C-DAC
+     Built for CF4VIT Hackathon <br>
+     Sponsored by C-DAC
   </p>
 </p>
 
@@ -18,7 +18,7 @@
 
 ---
 
-## 📌 Overview
+##  Overview
 
 Modern security monitoring systems generate **excessive alerts**, overwhelming security teams with false positives and burying real threats under noise.
 
@@ -40,7 +40,7 @@ We ask:
 
 ---
 
-# 🖥️ Dashboard Preview
+#  Dashboard Preview
 
 ## 🔹 Main Dashboard
 
@@ -50,7 +50,7 @@ We ask:
 
 ---
 
-## 🔹 Security Events Table
+##  Security Events Table
 
 <p align="center">
   <img src="assets/events.png" width="85%">
@@ -58,7 +58,7 @@ We ask:
 
 ---
 
-# 🧠 System Architecture
+#  System Architecture
 
 ```
 User Clicks "Simulate New Session"
@@ -82,9 +82,9 @@ Live Dashboard Update
 
 ---
 
-# ⚙️ Core Threat Detection Logic
+#  Core Threat Detection Logic
 
-## 1️⃣ Behavioral Baseline (7-Day Rolling Window)
+## 1. Behavioral Baseline (7-Day Rolling Window)
 
 Each user has contextual metrics such as:
 
@@ -97,36 +97,36 @@ Each user has contextual metrics such as:
 
 ---
 
-## 2️⃣ Deviation Analysis
+## 2. Deviation Analysis
 
 Example:
 
 ```
-data_volume_vs_mean_7D = current_data_volume / baseline_mean_7D
+data_volume_vs_mean_7D = current_data_volume / baseline_mean_7D + eps
 ```
 
 This normalizes behavior relative to user history.
 
 ---
 
-## 3️⃣ Risk Scoring Engine
+## 3. Risk Scoring Engine
 
 Risk is computed across three dimensions:
 
-### 🔐 Authentication Risk
+###  Authentication Risk
 - Excess failed logins → +25
 - High login frequency → +20
 
-### 📂 Data Risk
+###  Data Risk
 - Data volume spike → +30
 
-### 🌐 Context Risk
+###  Context Risk
 - Unusual access time → +10
 - Browser change → +10
 
 ---
 
-## 4️⃣ Severity Classification
+## 4. Severity Classification
 
 ```
 Risk >= 60 → HIGH
@@ -140,7 +140,7 @@ Each alert includes an **explainable reason**.
 
 ---
 
-# 🛡️ Security Design Features
+#  Security Design Features
 
 - Context-aware anomaly detection
 - Rolling time-window baselining
@@ -154,19 +154,9 @@ Each alert includes an **explainable reason**.
 
 ---
 
-# 🗄️ Database Engineering
+#  Database Engineering
 
-SQLite configured with:
-
-```
-PRAGMA journal_mode=WAL;
-PRAGMA synchronous=NORMAL;
-PRAGMA temp_store=MEMORY;
-PRAGMA foreign_keys=ON;
-```
-
-Indexes created on:
-
+SQLite indexes were created on:
 - user_id
 - session_start
 - ts_epoch
@@ -176,7 +166,7 @@ Optimized for fast historical lookups.
 
 ---
 
-# 📂 Project Structure
+#  Project Structure
 
 ```
 .
@@ -198,28 +188,28 @@ Optimized for fast historical lookups.
 
 ---
 
-# 🚀 Installation
+#  Installation
 
-## 1️⃣ Clone Repository
+## 1. Clone Repository
 
 ```
 git clone <your-repo-url>
 cd <repo-name>
 ```
 
-## 2️⃣ Install Dependencies
+## 2. Install Dependencies
 
 ```
 pip install -r requirements.txt
 ```
 
-## 3️⃣ Run Server
+## 3. Run Server
 
 ```
 uvicorn app:app --reload
 ```
 
-## 4️⃣ Open Dashboard
+## 4. Open Dashboard
 
 ```
 http://127.0.0.1:8000/
@@ -227,7 +217,7 @@ http://127.0.0.1:8000/
 
 ---
 
-# 🎓 Hackathon Context
+#  Hackathon Context
 
 Built during the **CF4VIT Hackathon (Sponsored by C-DAC)** under the Threat Detection track.
 
@@ -237,7 +227,7 @@ We defined our own focused problem:
 
 ---
 
-# 🎯 Impact
+#  Impact
 
 This system:
 
@@ -249,19 +239,7 @@ This system:
 
 ---
 
-# 💼 Resume-Ready Summary
-
-Built a context-aware threat detection system using FastAPI and rolling time-window analysis to evaluate user session anomalies. Designed a deviation-based risk scoring engine and real-time monitoring dashboard to reduce false positives and improve threat prioritization.
-
----
-
-# 🎤 30-Second Pitch
-
-We built a monitoring system that understands user behavior before generating alerts. By combining rolling 7-day baselines, deviation scoring, and contextual signals, we reduce alert noise and highlight meaningful threats — helping security teams prioritize effectively.
-
----
-
-# 👥 Team ByteShield
+#  Team ByteShield
 
 CF4VIT Hackathon Project  
 Sponsored by C-DAC  
